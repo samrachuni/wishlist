@@ -8,7 +8,7 @@ const baseUrl = 'http://localhost:3000/';
 const App = ({ user, onClickLogout }) => {
 	const [wish, setWish] = useState([]);
 	const [updatedWish, setUpdatedWish] = useState('');
-	const [searchedWish, setSearchedWish] = useState(false);
+	const [searchTextState, setSearchTextState] = useState('');
 
 	useEffect(() => {
 		/*const result = async () => {
@@ -82,6 +82,7 @@ const App = ({ user, onClickLogout }) => {
 		};
 		axios.post(baseUrl + 'wishlist', { newWish }).then((res) => {
 			console.log({ res });
+			setSearchTextState('');
 			setWish([res.data, ...wish]);
 		});
 		// updateDb
@@ -101,41 +102,31 @@ const App = ({ user, onClickLogout }) => {
 			});
 	};
 	const search = (el) => {
-		if (el !== '') {
-			setSearchedWish(true);
-			const newWWish = wish
-				.filter((each) => each.text.includes(el))
-				.map((item) => <wish />);
-		} else {
-			setSearchedWish(false);
-		}
-
-		console.log(searchedWish);
+		setSearchTextState(el);
 	};
 
 	return (
 		<div className="App">
 			<div>
-				<img></img>
 				<button onClick={onClickLogout} className="logout-button">
 					Log out
 				</button>
 				<h1 className="App-header">My wish list</h1>
 				<Input onSubmit={handleCreateWish} search={search} />
-				{wish.map((item) => (
-					<Wish
-						wish={wish}
-						setWish={setWish}
-						updatedWish={updatedWish}
-						deleteHandler={deleteHandler}
-						onWishChange={handleUpdateWish}
-						setUpdatedWish={setUpdatedWish}
-						item={item}
-						key={Math.random() * 100}
-						search={search}
-						searchedWish={searchedWish}
-					></Wish>
-				))}{' '}
+				{wish
+					.filter((each) => each.text.includes(searchTextState))
+					.map((item) => (
+						<Wish
+							wish={wish}
+							setWish={setWish}
+							updatedWish={updatedWish}
+							deleteHandler={deleteHandler}
+							onWishChange={handleUpdateWish}
+							setUpdatedWish={setUpdatedWish}
+							item={item}
+							key={Math.random() * 100}
+						></Wish>
+					))}{' '}
 			</div>
 		</div>
 	);
