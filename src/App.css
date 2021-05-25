@@ -1,0 +1,241 @@
+.App {
+	background-image: linear-gradient(
+		to right,
+		rgb(249, 164, 229),
+		rgb(162, 244, 242)
+	);
+	min-height: 100vh;
+	width: 100%;
+	text-align: center;
+	font-family: 'Sofia', sans-serif;
+
+	font-size: calc(10px + 2vmin);
+	color: rgb(7, 2, 2);
+}
+
+.App-input {
+	text-align: center;
+	width: 40vh;
+	height: 5vh;
+	font-size: 40px;
+	margin-bottom: 50px;
+}
+.App-header {
+	text-decoration: underline;
+}
+.App-bodyPart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.App-body {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 80vh;
+
+	/* height: 5vh; */
+}
+.App-button {
+	color: rgb(5, 198, 156);
+}
+.button-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 10vh;
+}
+.App-buttonDelete {
+	background-color: rgb(233, 2, 129);
+	color: white;
+	display: flex;
+	width: 40px;
+	height: 40px;
+	padding-top: 4px;
+}
+.App-buttonDone {
+	background-color: rgb(33, 242, 204);
+	display: flex;
+	color: white;
+	width: 40px;
+	height: 40px;
+	padding-top: 4px;
+}
+.btn-check {
+	background-color: rgb(222, 240, 236);
+	display: flex;
+	color: rgb(92, 204, 167);
+	width: 40px;
+	height: 40px;
+	padding-top: 4px;
+}
+.list {
+	list-style-type: none;
+}
+.fulfilled {
+	list-style-type: none;
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+.App-link {
+	color: #61dafb;
+}
+.mainlogin {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	margin-top: -10px;
+	background-image: linear-gradient(
+		to right,
+		rgb(197, 179, 193),
+		rgb(118, 146, 146)
+	);
+}
+.App-login {
+	font-family: 'Sofia', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(
+		to right,
+		rgb(249, 164, 229),
+		rgb(162, 244, 242)
+	);
+	font-size: 30px;
+	width: 600px;
+	height: 500px;
+	border: none;
+	margin-top: -10px;
+	padding: 50px;
+}
+.h1-login {
+	margin-top: -100px;
+	margin-bottom: 30px;
+}
+.App-inputlogin {
+	height: 60px;
+	font-size: 40px;
+	display: flex;
+	width: 800px;
+	flex-direction: row;
+
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 10px;
+}
+.App-logininput {
+	border: none;
+	border-radius: 10px;
+	background-color: rgb(230, 228, 225);
+	width: 500px;
+	font-size: 20px;
+}
+.App-buttonlogin {
+	display: flex;
+	justify-content: space-evenly;
+	font-size: 20px;
+	padding-top: 20px;
+	width: 500px;
+	margin-bottom: -30px;
+}
+.buttonlogin {
+	font-size: 20px;
+	background-color: rgb(230, 228, 225);
+
+	border-radius: 10px;
+	line-height: 45px;
+	width: 150px;
+}
+.buttonlogin:hover {
+	background-color: rgb(172, 167, 161);
+}
+.App-register {
+	font-family: 'Sofia', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-image: linear-gradient(
+		to right,
+		rgb(249, 164, 229),
+		rgb(162, 244, 242)
+	);
+	font-size: 30px;
+	width: 600px;
+	height: 500px;
+	border: none;
+	margin-top: 0px;
+	padding: 50px;
+}
+.h1-register {
+	margin-top: -100px;
+	margin-bottom: 30px;
+}
+.App-registerInput {
+	height: 60px;
+	font-size: 40px;
+	display: flex;
+	width: 500px;
+	flex-direction: column;
+	padding: -15px 10px;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 50px;
+	border: none;
+}
+.register-input {
+	margin: 10px;
+	background-color: rgb(230, 228, 225);
+	width: 100%;
+	line-height: 60px;
+
+	border: none;
+	border-radius: 10px;
+	font-size: 20px;
+}
+.register-button {
+	font-size: 20px;
+	background-color: rgb(230, 228, 225);
+	text-align: center;
+	border-radius: 10px;
+
+	width: 200px;
+	line-height: 45px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.register-button:hover {
+	background-color: rgb(172, 167, 161);
+}
+.logout-button {
+	font-size: 20px;
+	background-color: rgb(240, 45, 103);
+	text-align: center;
+	border-radius: 10px;
+
+	line-height: 45px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.logout-button:hover {
+	background-color: rgb(222, 39, 19);
+}
+.error {
+	font-size: 20px;
+	color: rgb(194, 4, 4);
+}
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
